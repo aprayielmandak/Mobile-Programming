@@ -45,3 +45,83 @@ console.log(merk, manual);
 // --------------------------------------------------------------------------------------------------------------------- //
 
 
+// - Destructuring dengan menggunakan default value (Array & Object)
+
+//Array
+let angka = ["a","b", "c", "d", "e"];
+let {satu=10, dua=20, tiga=30, empat=40, lima=50} = angka;
+console.log(tiga);
+
+//Object
+function Mengemudi({pengemudi = "X", kendaraan = "Y", tujuan = "Z"}){
+  return `Seorang ${pengemudi} mengemudikan kendaraan ${kendaraan} dengan tujuan ${tujuan}`;
+  }
+let test = Mengemudi ({pengemudi: "supir", tujuan:"rumah"});
+console.log(test);
+
+
+// --------------------------------------------------------------------------------------------------------------------- //
+
+// - Destructuring dengan mengambil sebagian item (Array & Object)
+
+//Array
+let rumah = ["Tipe1", "Tipe2",  "Tipe3", "Tipe4"];
+let [Rumah1, , , Rumah4] = rumah;
+console.log(Rumah1);
+console.log(Rumah4);
+//Di sini item yang tidak diambil adalah index ke 1 dan ke 2, dengan cara hanya menaruh "," kosong
+
+//Object
+let mobil = {
+    merk: "Honda",
+    jenis: "Sedan",
+    warna: "Hitam",
+    manual: false
+};
+let {merk, manual} = mobil;
+console.log(merk, manual);
+//object tidak memperhatikan urutan, jadi dapat diambil apa saja
+
+
+// --------------------------------------------------------------------------------------------------------------------- //
+
+
+// - Destructuring dengan menggunakan default value (Array & Object)
+
+//Array
+let angka = ["a","b", "c", "d", "e"];
+let {satu=10, dua=20, tiga=30, empat=40, lima=50} = angka;
+console.log(tiga);
+
+//Object
+function Mengemudi({pengemudi = "X", kendaraan = "Y", tujuan = "Z"}){
+  return `Seorang ${pengemudi} mengemudikan kendaraan ${kendaraan} dengan tujuan ${tujuan}`;
+  }
+let test = Mengemudi ({pengemudi: "supir", tujuan:"rumah"});
+console.log(test);
+
+
+// --------------------------------------------------------------------------------------------------------------------- //
+
+
+// - Destructuring dengan menggunakan rest operator (Array & Object)
+
+//Array
+const animals = ["Dog", "Rabbit", "Cat", "Cow", "Fish", "Lizard", "Bird"];
+const [a, b, c, ...rest] = animals;
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(rest);
+
+//Object
+const mahasiswa = {
+    nama: "Jane",
+    gender: "Female",
+    faculty: "Ekonomi",
+    address: "Manado",
+    ActiveStudent: true
+};
+const {nama, gender, ...mhs} = mahasiswa;
+console.log(gender);
+console.log(mhs);
