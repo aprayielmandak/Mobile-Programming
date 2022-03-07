@@ -4,7 +4,7 @@ import Toyota from './Components/Toyota';
 import Honda from './Components/Honda';
 import Tesla from './Components/Tesla';
 import Suzuki from './Components/Suzuki';
-
+import Daihatsu from './Components/Daihatsu';
 
 export default App = () => {
   const [state, setState] = useState({
@@ -28,6 +28,11 @@ export default App = () => {
       warna: 'peach',
       alamat: 'Aermadidi',
     },
+    Daihatsu: {
+      pemilik: 'Susan',
+      warna: 'putih',
+      alamat: 'Bitung',
+    },
   });
 
   return (
@@ -36,6 +41,7 @@ export default App = () => {
       <Honda props={state.Honda} />
       <Tesla props={state.Tesla} />
       <Suzuki props={state.Suzuki} />
+      <Daihatsu props={state.Daihatsu} />
     </View>
   );
 };
