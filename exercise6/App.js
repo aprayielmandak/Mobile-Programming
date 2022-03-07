@@ -3,6 +3,7 @@ import {View} from 'react-native';
 import Toyota from './Components/Toyota';
 import Honda from './Components/Honda';
 import Tesla from './Components/Tesla';
+import Suzuki from './Components/Suzuki';
 
 
 export default App = () => {
@@ -22,6 +23,11 @@ export default App = () => {
       warna: 'putih',
       alamat: 'Manado',
     },
+    Suzuki: {
+      pemilik: 'Miranda',
+      warna: 'peach',
+      alamat: 'Aermadidi',
+    },
   });
 
   return (
@@ -29,6 +35,7 @@ export default App = () => {
       <Toyota props={state.Toyota} />
       <Honda props={state.Honda} />
       <Tesla props={state.Tesla} />
+      <Suzuki props={state.Suzuki} />
     </View>
   );
 };
