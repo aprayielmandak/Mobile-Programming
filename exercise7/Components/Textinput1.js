@@ -38,6 +38,7 @@ const InputData = () => {
         onChangeText={onChangepass}
         value={pass}
         placeholder="Password"
+        secureTextEntry={true}
       />
       <TouchableOpacity style={styles.login} onPress={ResetForm}>
         <Text>Login</Text>
@@ -45,3 +46,34 @@ const InputData = () => {
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#FFEDDB',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  input: {
+    marginBottom: 10,
+    marginTop: 30,
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    borderRadius: 25,
+    width: '80%',
+    backgroundColor: '#E3B7A0',
+  },
+  login: {
+    width: '50%',
+    height: 50,
+    backgroundColor: '#BF9270',
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 30,
+    marginBottom: 10,
+  },
+});
+
+export default InputData;
